@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bored Room Café | Homestyle Food in Ferness Estate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: linear-gradient(135deg, #b4ff72 0%, #00b894 100%);
+      --text-color: #222;
+      --card-bg: #f0f8f0;
+      --accent: #00b894;
+      --nav-bg: rgba(0,184,148,0.9);
+      --hero-gradient: linear-gradient(120deg, #d4ff80 0%, #63e6be 100%);
+    }
+
+    [data-theme="dark"] {
+      --bg-main: linear-gradient(135deg, #0c1a13 0%, #16291f 100%);
+      --text-color: #eee;
+      --card-bg: #1b3127;
+      --accent: #b2ff9e;
+      --nav-bg: rgba(0,184,148,0.9);
+      --hero-gradient: radial-gradient(circle at center, #1f3a2e 0%, #0f1e17 100%);
+    }
+
+    [data-theme="dark"] .menu-section {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] .cta-btn-primary {
+      background: #00b894;
+      color: #000;
+    }
+
+    [data-theme="light"] .menu-section {
+      background: transparent;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-color);
+      transition: background 0.6s ease, color 0.4s ease;
+      scroll-behavior: smooth;
+    }
+
+    nav.navbar {
+      background-color: var(--nav-bg);
+      backdrop-filter: blur(10px);
+      transition: background-color 0.4s ease;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--accent) !important;
+    }
+
+    .nav-link {
+      color: var(--text-color) !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    .theme-toggle {
+      border: none;
+      background: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: rotate(20deg);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: var(--hero-gradient);
+      transition: background 0.6s ease;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: var(--text-color);
+    }
+
+    .cta-btn {
+      margin: 10px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .cta-btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .cta-btn-primary:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    .cta-btn-outline {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .cta-btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .menu-section {
+      padding: 80px 0;
+      background: var(--card-bg);
+      color: var(--text-color);
+      transition: background 0.6s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] .menu-section {
+      color: #fff;
+    }
+
+    [data-theme="dark"] .menu-card h5,
+    [data-theme="dark"] .menu-card p {
+      color: #fff !important;
+    }
+
+    .menu-card {
+      border-radius: 15px;
+      overflow: hidden;
+      background: var(--card-bg);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about, .contact {
+      padding: 80px 0;
+    }
+
+    .about {
+      background: transparent;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.85);
+      color: #ccc;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#"><img src="assests/Logo.png" alt="" style="height: 40px; margin-right: 10px;"> <span style="color: black; font-weight: bold;">Bored Room</span><span style="color: white; font-weight: normal;">&nbsp;Café</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Soft Opening — Friday, 24 October 2025</h1>
+      <p class="lead mb-4">Join us for homestyle food and good vibes at Ferness Estate.</p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center">
+        <a href="https://wa.me/27619337135" class="cta-btn cta-btn-primary text-decoration-none">📱 Order on WhatsApp</a>
+        <a href="#menu" class="cta-btn cta-btn-outline text-decoration-none">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="menu-section text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-5">Our Menu</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="menu-card card">
+            <img src="assests/Akni-Chicken.png" alt="Chicken Akni">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Chicken Akni</h5>
+              <p>Small R60 • Large R85</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="menu-card card">
+            <img src="assests/Biryani-Mutton.png" alt="Mutton Biryani">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mutton Biryani</h5>
+              <p>Small R80 • Large R110</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="menu-card card">
+            <img src="assests/Curry-Mutton.png" alt="Mutton Curry Salomie">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mutton Curry Salomie</h5>
+              <p>R90 Each</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">About Bored Room Café</h2>
+      <p class="lead mx-auto" style="max-width:700px;">
+        Bored Room Café is your local spot for hearty, homestyle food in Ferness Estate. 
+        Whether you’re craving Chicken Akni, Mutton Biryani, or a spicy Mutton Curry Salomie — 
+        every dish is made with passion and care. Come enjoy food that feels like home.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Contact Us</h2>
+      <p class="lead">📍 113 Plantation Road, Ferness Estate</p>
+      <div class="mb-3">
+        <iframe src="https://maps.google.com/maps?q=113+Plantation+Road,+Ferness+Estate&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <p>📞 <a href="tel:+27619337135" class="fw-bold text-decoration-none" style="color: var(--text-color);">061 933 7135</a></p>
+      <p>🕒 Fri: 2:30pm – 6:30pm | Sat: 10:00am – 5:00pm</p>
+      <a href="https://maps.google.com/?q=113+Plantation+Road,+Ferness+Estate" class="btn btn-success mt-3">Get Directions</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Bored Room Café | Crafted with ❤️ by <a href="https://nemesisnet.co.za">NemesisNet</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const whatsappLink = document.querySelector('.cta-btn-primary[href*="wa.me"]');
+      if (whatsappLink && window.innerWidth > 768) {
+        whatsappLink.setAttribute('target', '_blank');
+        whatsappLink.setAttribute('rel', 'noopener');
+      }
+    });
+
+    const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    toggleBtn.textContent = currentTheme === 'dark' ? '🌞' : '🌙';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', newTheme);
+      toggleBtn.textContent = newTheme === 'dark' ? '🌞' : '🌙';
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+</body>
+</html>

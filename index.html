@@ -12,6 +12,48 @@
   <link rel="apple-touch-icon" sizes="180x180" href="https://boredroomcafe.nemesisnet.co.za/assets/Logo-Icon.png">
   <!-- Browser color theme -->
   <meta name="theme-color" content="#8B4513">
+  <!-- Primary SEO tags -->
+  <meta name="description" content="Bored Room Café — Homestyle Chicken Akni, Mutton Biryani and Mutton Curry in Ferness Estate. Open Fri & Sat. Order on WhatsApp: 061 933 7135.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://boredroomcafe.nemesisnet.co.za/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="en_ZA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bored Room Café | Homestyle Food in Ferness Estate" />
+  <meta property="og:description" content="Bored Room Café — Homestyle Chicken Akni, Mutton Biryani and Mutton Curry in Ferness Estate. Open Fri & Sat. Order on WhatsApp: 061 933 7135." />
+  <meta property="og:url" content="https://boredroomcafe.nemesisnet.co.za/" />
+  <meta property="og:image" content="https://boredroomcafe.nemesisnet.co.za/assets/Generated-ahkni-hi-rez-01ez.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bored Room Café | Homestyle Food in Ferness Estate">
+  <meta name="twitter:description" content="Homestyle Chicken Akni, Mutton Biryani & Mutton Curry — order on WhatsApp 061 933 7135.">
+  <meta name="twitter:image" content="https://boredroomcafe.nemesisnet.co.za/assets/Generated-ahkni-hi-rez-01ez.png">
+
+  <!-- Structured data (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bored Room Café",
+    "url": "https://boredroomcafe.nemesisnet.co.za/",
+    "telephone": "+27619337135",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "113 Plantation Road",
+      "addressLocality": "Ferness Estate",
+      "addressCountry": "ZA"
+    },
+    "openingHours": ["Fri 14:30-18:30","Sat 10:00-17:00"],
+    "image": "https://boredroomcafe.nemesisnet.co.za/assets/Generated-ahkni-hi-rez-01ez.png",
+    "priceRange": "R",
+    "sameAs": [
+      "https://boredroomcafe.nemesisnet.co.za",
+      "https://www.facebook.com/people/Bored-Room-Cafe/61582472085204"
+    ]
+  }
+  </script>
   <style>
     :root {
       --bg-main: linear-gradient(135deg, #b4ff72 0%, #00b894 100%);
@@ -21,6 +63,10 @@
       --nav-bg: rgba(0,184,148,0.9);
       --hero-gradient: linear-gradient(120deg, #d4ff80 0%, #63e6be 100%);
       --nav-height: 64px;
+      /* Social button colors */
+      --social-bg: rgba(0,0,0,0.04);
+      --social-border: rgba(0,0,0,0.12);
+      --social-color: var(--accent);
     }
 
     [data-theme="dark"] {
@@ -30,6 +76,10 @@
       --accent: #b2ff9e;
       --nav-bg: rgba(0,184,148,0.9);
       --hero-gradient: radial-gradient(circle at center, #1f3a2e 0%, #0f1e17 100%);
+      /* Social button colors in dark theme */
+      --social-bg: rgba(255,255,255,0.04);
+      --social-border: rgba(255,255,255,0.10);
+      --social-color: var(--accent);
     }
 
     [data-theme="dark"] .menu-section {
@@ -199,6 +249,113 @@
       scroll-margin-top: var(--nav-height);
     }
 
+    /* Social / contact button used in Contact section */
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--social-border);
+      background: var(--social-bg);
+      color: var(--social-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.12s ease, filter 0.12s ease;
+    }
+
+    .social-btn svg { fill: currentColor; }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.02);
+    }
+
+    /* smaller variant for footer */
+    .social-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.45rem;
+      border-radius: 6px;
+      border: 1px solid var(--social-border);
+      background: var(--social-bg);
+      color: var(--social-color);
+      text-decoration: none;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    /* Make social buttons more prominent in light mode (filled, high-contrast accent) */
+    body[data-theme="light"] .social-btn,
+    body[data-theme="light"] .social-footer {
+      /* Use a darker accent for better contrast with white text */
+      background: #007a4f; /* darker green for accessibility */
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    }
+    body[data-theme="light"] .social-btn svg,
+    body[data-theme="light"] .social-footer svg { fill: currentColor; }
+
+    /* Focus state for accessibility */
+    .social-btn:focus, .social-footer:focus {
+      outline: 3px solid rgba(0,122,79,0.18);
+      outline-offset: 2px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    /* Footer social button: keep the same filled accent style as light mode (consistent appearance) */
+    body[data-theme="dark"] .social-footer {
+      background: #007a4f; /* same darker accent used for high contrast */
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+    }
+    body[data-theme="dark"] .social-footer svg { fill: currentColor; }
+
+    /* Make Contact buttons visually identical (height, padding, alignment, transitions) */
+    #contact .d-flex a.btn,
+    #contact .d-flex .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      height: 44px;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      min-width: 160px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.12s ease;
+      will-change: transform;
+    }
+
+    /* Hover / active states shared by both buttons */
+    #contact .d-flex a.btn:hover,
+    #contact .d-flex .social-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    #contact .d-flex a.btn:active,
+    #contact .d-flex .social-btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    }
+
+    /* Make stacked (mobile) buttons full-width for easier tapping */
+    @media (max-width: 576px) {
+      #contact .d-flex.flex-column a.btn,
+      #contact .d-flex.flex-column .social-btn {
+        width: 100%;
+        min-width: 0;
+      }
+      #contact .d-flex a.btn,
+      #contact .d-flex .social-btn {
+        transform: none; /* avoid hover lift on mobile */
+      }
+    }
+
     /* Prefer mandatory snap on small/touch screens */
     @media (max-width: 576px) {
   html { scroll-snap-type: y mandatory; }
@@ -210,7 +367,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-  <a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/Logo.png" alt="" style="height: 40px; margin-right: 10px;"> <span style="color: black; font-weight: bold;">Bored Room</span><span style="color: white; font-weight: normal;">&nbsp;Café</span></a>
+  <a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/Logo.png" alt="Bored Room Café logo" style="height: 40px; margin-right: 10px;"> <span style="color: black; font-weight: bold;">Bored Room</span><span style="color: white; font-weight: normal;">&nbsp;Café</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -247,7 +404,7 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="menu-card card">
-            <img src="assets/Generated-ahkni-hi-rez-01ez.png" alt="Chicken Akni">
+            <img src="assets/Generated-ahkni-hi-rez-01ez.png" alt="Chicken Akni" loading="lazy">
             <div class="card-body">
               <h5 class="card-title fw-bold">Chicken Akni</h5>
               <p>Small R60 • Large R85</p>
@@ -256,7 +413,7 @@
         </div>
         <div class="col-md-4">
           <div class="menu-card card">
-            <img src="assets/briyaani-hi-res-01.jpeg" alt="Mutton Biryani">
+            <img src="assets/briyaani-hi-res-01.jpeg" alt="Mutton Biryani" loading="lazy">
             <div class="card-body">
               <h5 class="card-title fw-bold">Mutton Biryani</h5>
               <p>Small R80 • Large R110</p>
@@ -265,7 +422,7 @@
         </div>
         <div class="col-md-4">
           <div class="menu-card card">
-            <img src="assets/mutton-curry-hi-res-01.jpeg" alt="Mutton Curry Salomie">
+            <img src="assets/mutton-curry-hi-res-01.jpeg" alt="Mutton Curry Salomie" loading="lazy">
             <div class="card-body">
               <h5 class="card-title fw-bold">Mutton Curry Salomie</h5>
               <p>R90 Each</p>
@@ -298,14 +455,34 @@
       </div>
       <p>📞 <a href="tel:+27619337135" class="fw-bold text-decoration-none" style="color: var(--text-color);">061 933 7135</a></p>
       <p>🕒 Fri: 2:30pm – 6:30pm | Sat: 10:00am – 5:00pm</p>
-      <a href="https://maps.google.com/?q=113+Plantation+Road,+Ferness+Estate" class="btn btn-success mt-3">Get Directions</a>
+      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
+        <a href="https://maps.google.com/?q=113+Plantation+Road,+Ferness+Estate" class="btn btn-success mt-3">Get Directions</a>
+
+        <!-- Facebook link for contact area -->
+        <a href="https://www.facebook.com/people/Bored-Room-Cafe/61582472085204" class="social-btn mt-3" target="_blank" rel="noopener noreferrer" aria-label="Bored Room Café on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21.13 10.44 21.93v-6.78H8.08v-2.98h2.36V9.41c0-2.33 1.4-3.61 3.53-3.61 1.02 0 2.09.18 2.09.18v2.3h-1.17c-1.15 0-1.51.72-1.51 1.46v1.75h2.57l-.41 2.98h-2.16v6.78C18.34 21.13 22 17.09 22 12.07z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 Bored Room Café | Crafted with ❤️ by <a href="https://nemesisnet.co.za">NemesisNet</a></p>
+      <p>
+        © 2025 Bored Room Café
+        <a href="https://www.facebook.com/people/Bored-Room-Cafe/61582472085204" class="social-footer ms-3" target="_blank" rel="noopener noreferrer" aria-label="Bored Room Café on Facebook">
+          <!-- Inline Facebook SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21.13 10.44 21.93v-6.78H8.08v-2.98h2.36V9.41c0-2.33 1.4-3.61 3.53-3.61 1.02 0 2.09.18 2.09.18v2.3h-1.17c-1.15 0-1.51.72-1.51 1.46v1.75h2.57l-.41 2.98h-2.16v6.78C18.34 21.13 22 17.09 22 12.07z"/>
+          </svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        | Crafted with ❤️ by <a href="https://nemesisnet.co.za">NemesisNet</a>
+      </p>
     </div>
   </footer>
 

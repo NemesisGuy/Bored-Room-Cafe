@@ -13,7 +13,9 @@
   <!-- Browser color theme -->
   <meta name="theme-color" content="#8B4513">
   <!-- Primary SEO tags -->
-  <meta name="description" content="Bored Room Café — Homestyle Chicken Akni, Mutton Biryani and Mutton Curry in Ferness Estate. Open Fri & Sat. Order on WhatsApp: 061 933 7135.">
+  <meta name="description" content="Bored Room Café — Homestyle Chicken Akni, Mutton Biryani and Mutton Curry in Ferness Estate. Currently serving takeaways only. Order on WhatsApp: 061 933 7135.">
+  <meta name="keywords" content="Bored Room Café,Ferness Estate food,homestyle catering,Cape Malay cuisine,akni,biryani,salomie,local cafe">
+  <meta name="author" content="Bored Room Café">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://boredroomcafe.nemesisnet.co.za/">
 
@@ -23,13 +25,20 @@
   <meta property="og:title" content="Bored Room Café | Homestyle Food in Ferness Estate" />
   <meta property="og:description" content="Bored Room Café — Homestyle Chicken Akni, Mutton Biryani and Mutton Curry in Ferness Estate. Open Fri & Sat. Order on WhatsApp: 061 933 7135." />
   <meta property="og:url" content="https://boredroomcafe.nemesisnet.co.za/" />
-  <meta property="og:image" content="https://boredroomcafe.nemesisnet.co.za/assets/Generated-ahkni-hi-rez-01ez.png" />
-
+  <meta property="og:image" content="https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png" />
+  <meta property="og:image:alt" content="Bored Room Café Logo" />
+  <meta property="og:site_name" content="Bored Room Café" />
+  <meta property="og:image:secure_url" content="https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bored Room Café | Homestyle Food in Ferness Estate">
   <meta name="twitter:description" content="Homestyle Chicken Akni, Mutton Biryani & Mutton Curry — order on WhatsApp 061 933 7135.">
-  <meta name="twitter:image" content="https://boredroomcafe.nemesisnet.co.za/assets/Generated-ahkni-hi-rez-01ez.png">
+  <meta name="twitter:image" content="https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png">
+  <meta name="twitter:image:alt" content="Bored Room Café Logo">
+   
 
   <!-- Structured data (LocalBusiness) -->
   <script type="application/ld+json">
@@ -38,6 +47,7 @@
     "@type": "Restaurant",
     "name": "Bored Room Café",
     "url": "https://boredroomcafe.nemesisnet.co.za/",
+    "@id": "https://boredroomcafe.nemesisnet.co.za/#restaurant",
     "telephone": "+27619337135",
     "address": {
       "@type": "PostalAddress",
@@ -46,7 +56,20 @@
       "addressCountry": "ZA"
     },
     "openingHours": ["Fri 14:30-18:30","Sat 10:00-17:00"],
-    "image": "https://boredroomcafe.nemesisnet.co.za/assets/Generated-ahkni-hi-rez-01ez.png",
+    "image": [
+      "https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png",
+      "https://boredroomcafe.nemesisnet.co.za/assets/images/Chicken%20Burger.jpeg",
+      "https://boredroomcafe.nemesisnet.co.za/assets/images/Mutton%20Curry%20Salomie.jpeg",
+      "https://boredroomcafe.nemesisnet.co.za/assets/images/Butter%20Chicken%20Salomie.jpeg",
+      "https://boredroomcafe.nemesisnet.co.za/assets/images/Boerewors%20Roll.jpeg",
+      "https://boredroomcafe.nemesisnet.co.za/assets/images/Samoosas.jpeg"
+    ],
+    "logo": "https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png",
+    "description": "Bored Room Café serves homestyle Cape Malay-inspired dishes for takeaway from Ferness Estate.",
+    "hasTakeout": true,
+    "hasDelivery": false,
+    "servesCuisine": ["Cape Malay","South African","Cafe"],
+    "hasMap": "https://maps.google.com/?q=113+Plantation+Road,+Ferness+Estate",
     "priceRange": "R",
     "sameAs": [
       "https://boredroomcafe.nemesisnet.co.za",
@@ -54,6 +77,8 @@
     ]
   }
   </script>
+  <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="0161663e-249f-40aa-accb-993213726605"></script>
+
   <style>
     :root {
       --bg-main: linear-gradient(135deg, #b4ff72 0%, #00b894 100%);
@@ -193,6 +218,76 @@
       background: var(--card-bg);
       color: var(--text-color);
       transition: background 0.6s ease, color 0.4s ease;
+    }
+
+    .gallery-section {
+      padding: 80px 0;
+      background: transparent;
+    }
+
+    .disclaimer-note {
+      font-size: 0.92rem;
+      color: rgba(0,0,0,0.64);
+    }
+
+    [data-theme="dark"] .disclaimer-note {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--card-bg);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-card figcaption {
+      padding: 1.25rem 1.5rem;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .gallery-card h5 {
+      font-weight: 700;
+    }
+
+    .gallery-card p {
+      margin-bottom: 0;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 576px) {
+      .gallery-card img {
+        height: 200px;
+      }
     }
 
     [data-theme="dark"] .menu-section {
@@ -583,6 +678,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav me-3">
           <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -724,6 +820,54 @@
         </div>
   <!-- Note: New images pending — update visuals later when provided by owners. -->
       </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Gallery</h2>
+  <p class="section-desc mb-0">Fresh shots from the kitchen — swipe through to see what’s cooking this week.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="assets/images/Chicken%20Burger.jpeg" alt="Chicken burger stacked with slaw and house sauce" loading="lazy">
+          <figcaption>
+            <h5>Chicken Burger</h5>
+            <p>Golden fillet, toasted bun, crunchy slaw and our tangy house sauce.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="assets/images/Butter%20Chicken%20Salomie.jpeg" alt="Butter chicken salomie filled with creamy curry" loading="lazy">
+          <figcaption>
+            <h5>Butter Chicken Salomie</h5>
+            <p>Soft paratha wrapped around buttery chicken masala and fresh greens.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="assets/images/Mutton%20Curry%20Salomie.jpeg" alt="Mutton curry salomie with rich gravy" loading="lazy">
+          <figcaption>
+            <h5>Mutton Curry Salomie</h5>
+            <p>Slow-cooked mutton curry tucked into flaky pastry with a mild kick.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="assets/images/Boerewors%20Roll.jpeg" alt="Boerewors roll with relish and garnish" loading="lazy">
+          <figcaption>
+            <h5>Boerewors Roll</h5>
+            <p>Charred wors, relish and pickled garnish – the perfect grab-and-go bite.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="assets/images/Samoosas.jpeg" alt="Tray of crispy samoosas" loading="lazy">
+          <figcaption>
+            <h5>Samoosas</h5>
+            <p>Hand-folded triangles, deep fried to a crunch with a fragrant filling.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="disclaimer-note text-center mt-4">Images are serving suggestions — we’re a takeaway-only kitchen right now.</p>
     </div>
   </section>
 

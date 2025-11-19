@@ -7,9 +7,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://boredroomcafe.nemesisnet.co.za/assets/Logo-Icon.png">
-  <link rel="shortcut icon" href="https://boredroomcafe.nemesisnet.co.za/assets/Logo-Icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://boredroomcafe.nemesisnet.co.za/assets/Logo-Icon.png">
+  <link rel="icon" href="assets/images/branding/logo-icon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/logo-icon/logo-icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/branding/logo-icon/logo-icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/logo-icon/logo-icon-180.png">
   <!-- Browser color theme -->
   <meta name="theme-color" content="#8B4513">
   <!-- Primary SEO tags -->
@@ -25,10 +26,10 @@
   <meta property="og:title" content="Bored Room Café | Homestyle Food in Ferness Estate" />
   <meta property="og:description" content="Bored Room Café — Homestyle Chicken Akni, Mutton Biryani and Mutton Curry in Ferness Estate. Open Fri & Sat. Order on WhatsApp: 061 933 7135." />
   <meta property="og:url" content="https://boredroomcafe.nemesisnet.co.za/" />
-  <meta property="og:image" content="https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png" />
+  <meta property="og:image" content="https://boredroomcafe.nemesisnet.co.za/assets/images/branding/logo-hirez/logo-hirez-1200w.png" />
   <meta property="og:image:alt" content="Bored Room Café Logo" />
   <meta property="og:site_name" content="Bored Room Café" />
-  <meta property="og:image:secure_url" content="https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png" />
+  <meta property="og:image:secure_url" content="https://boredroomcafe.nemesisnet.co.za/assets/images/branding/logo-hirez/logo-hirez-1200w.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -36,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bored Room Café | Homestyle Food in Ferness Estate">
   <meta name="twitter:description" content="Homestyle Chicken Akni, Mutton Biryani & Mutton Curry — order on WhatsApp 061 933 7135.">
-  <meta name="twitter:image" content="https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png">
+  <meta name="twitter:image" content="https://boredroomcafe.nemesisnet.co.za/assets/images/branding/logo-hirez/logo-hirez-1200w.png">
   <meta name="twitter:image:alt" content="Bored Room Café Logo">
    
 
@@ -57,14 +58,14 @@
     },
     "openingHours": ["Fri 14:30-18:30","Sat 10:00-17:00"],
     "image": [
-      "https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png",
-      "https://boredroomcafe.nemesisnet.co.za/assets/images/Chicken%20Burger.jpeg",
-      "https://boredroomcafe.nemesisnet.co.za/assets/images/Mutton%20Curry%20Salomie.jpeg",
-      "https://boredroomcafe.nemesisnet.co.za/assets/images/Butter%20Chicken%20Salomie.jpeg",
-      "https://boredroomcafe.nemesisnet.co.za/assets/images/Boerewors%20Roll.jpeg",
-      "https://boredroomcafe.nemesisnet.co.za/assets/images/Samoosas.jpeg"
+  "https://boredroomcafe.nemesisnet.co.za/assets/images/branding/logo-hirez/logo-hirez-1200w.png",
+  "https://boredroomcafe.nemesisnet.co.za/assets/images/gallery/chicken-burger/chicken-burger-1200w.jpeg",
+  "https://boredroomcafe.nemesisnet.co.za/assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-1200w.jpeg",
+  "https://boredroomcafe.nemesisnet.co.za/assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-1200w.jpeg",
+  "https://boredroomcafe.nemesisnet.co.za/assets/images/gallery/boerewors-roll/boerewors-roll-1200w.jpeg",
+  "https://boredroomcafe.nemesisnet.co.za/assets/images/gallery/samoosas/samoosas-1200w.jpeg"
     ],
-    "logo": "https://boredroomcafe.nemesisnet.co.za/assets/logo-BRC-hi-rez.png",
+  "logo": "https://boredroomcafe.nemesisnet.co.za/assets/images/branding/logo-primary/logo-primary-512.png",
     "description": "Bored Room Café serves homestyle Cape Malay-inspired dishes for takeaway from Ferness Estate.",
     "hasTakeout": true,
     "hasDelivery": false,
@@ -142,6 +143,18 @@
     .navbar-brand {
       font-weight: 700;
       color: var(--accent) !important;
+    }
+
+    .navbar-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .navbar-logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
     }
 
     .nav-link {
@@ -328,13 +341,38 @@
     footer {
       background: rgba(0,0,0,0.85);
       color: #ccc;
-      padding: 20px 0;
-      text-align: center;
+      padding: 24px 0;
     }
 
     footer a {
       color: var(--accent);
       text-decoration: none;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .footer-line span,
+    .footer-line a {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .footer-divider {
+      opacity: 0.55;
     }
 
     /* Scroll snap for section-by-section paging */
@@ -347,6 +385,13 @@
       scroll-snap-align: start;
       scroll-snap-stop: always;
       scroll-margin-top: var(--nav-height);
+    }
+
+    #contact,
+    footer {
+      scroll-snap-align: none;
+      scroll-snap-stop: normal;
+      scroll-margin-top: 0;
     }
 
     /* Social / contact button used in Contact section */
@@ -557,10 +602,18 @@
       }
     }
 
-    /* Prefer mandatory snap on small/touch screens */
+    /* Prefer lighter snap on touch screens and shrink map for extra space */
     @media (max-width: 576px) {
-  html { scroll-snap-type: y mandatory; }
-  body { padding-top: 0; }
+      html { scroll-snap-type: y proximity; }
+      body { padding-top: 0; }
+      #contact iframe { height: 260px; }
+      .footer-line {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .footer-divider {
+        display: none;
+      }
     }
 
     /* Mobile navbar collapse: expand as a full-width dropdown under the navbar to avoid off-screen rendering
@@ -671,7 +724,13 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-  <a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/Logo.png" alt="Bored Room Café logo" style="height: 40px; margin-right: 10px;"> <span style="color: black; font-weight: bold;">Bored Room</span><span style="color: white; font-weight: normal;">&nbsp;Café</span></a>
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <picture class="navbar-logo">
+      <source type="image/webp" srcset="assets/images/branding/logo-primary/logo-primary-256.webp" media="(min-width: 576px)">
+      <img class="navbar-logo-img" src="assets/images/branding/logo-primary/logo-primary-256.png" alt="Bored Room Café logo">
+    </picture>
+    <span style="color: black; font-weight: bold;">Bored Room</span><span style="color: white; font-weight: normal;">&nbsp;Café</span>
+  </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -715,7 +774,15 @@
   <div class="row g-4">
         <div class="col-md-4">
           <div class="menu-card card">
-            <img src="assets/Generated-ahkni-hi-rez-01ez.png" alt="Chicken Akni" loading="lazy">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/menu/chicken-akni/chicken-akni-480w.webp 480w, assets/images/menu/chicken-akni/chicken-akni-800w.webp 800w, assets/images/menu/chicken-akni/chicken-akni-1200w.webp 1200w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 480px, 360px">
+              <img src="assets/images/menu/chicken-akni/chicken-akni-800w.jpeg"
+                srcset="assets/images/menu/chicken-akni/chicken-akni-480w.jpeg 480w, assets/images/menu/chicken-akni/chicken-akni-800w.jpeg 800w, assets/images/menu/chicken-akni/chicken-akni-1200w.jpeg 1200w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 480px, 360px"
+                alt="Chicken Akni" loading="lazy">
+            </picture>
             <div class="card-body">
               <h5 class="card-title fw-bold">Chicken Akni</h5>
               <p>Small R60 • Large R85</p>
@@ -724,7 +791,15 @@
         </div>
         <div class="col-md-4">
           <div class="menu-card card">
-            <img src="assets/briyaani-hi-res-01.jpeg" alt="Mutton Biryani" loading="lazy">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/menu/mutton-biryani/mutton-biryani-480w.webp 480w, assets/images/menu/mutton-biryani/mutton-biryani-800w.webp 800w, assets/images/menu/mutton-biryani/mutton-biryani-1200w.webp 1200w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 480px, 360px">
+              <img src="assets/images/menu/mutton-biryani/mutton-biryani-800w.jpeg"
+                srcset="assets/images/menu/mutton-biryani/mutton-biryani-480w.jpeg 480w, assets/images/menu/mutton-biryani/mutton-biryani-800w.jpeg 800w, assets/images/menu/mutton-biryani/mutton-biryani-1200w.jpeg 1200w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 480px, 360px"
+                alt="Mutton Biryani" loading="lazy">
+            </picture>
             <div class="card-body">
               <h5 class="card-title fw-bold">Mutton Biryani</h5>
               <p>Small R80 • Large R110</p>
@@ -733,7 +808,15 @@
         </div>
         <div class="col-md-4">
           <div class="menu-card card">
-            <img src="assets/mutton-curry-hi-res-01.jpeg" alt="Mutton Curry Salomie" loading="lazy">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-480w.webp 480w, assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-800w.webp 800w, assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-1200w.webp 1200w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 480px, 360px">
+              <img src="assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-800w.jpeg"
+                srcset="assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-480w.jpeg 480w, assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-800w.jpeg 800w, assets/images/menu/mutton-curry-salomie/mutton-curry-salomie-1200w.jpeg 1200w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 480px, 360px"
+                alt="Mutton Curry Salomie" loading="lazy">
+            </picture>
             <div class="card-body">
               <h5 class="card-title fw-bold">Mutton Curry Salomie</h5>
               <p>R90 Each</p>
@@ -832,35 +915,85 @@
       </div>
       <div class="gallery-grid">
         <figure class="gallery-card">
-          <img src="assets/images/Chicken%20Burger.jpeg" alt="Chicken burger stacked with slaw and house sauce" loading="lazy">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/gallery/chicken-burger/chicken-burger-480w.webp 480w, assets/images/gallery/chicken-burger/chicken-burger-800w.webp 800w, assets/images/gallery/chicken-burger/chicken-burger-1200w.webp 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px">
+            <img
+              src="assets/images/gallery/chicken-burger/chicken-burger-800w.jpeg"
+              srcset="assets/images/gallery/chicken-burger/chicken-burger-480w.jpeg 480w, assets/images/gallery/chicken-burger/chicken-burger-800w.jpeg 800w, assets/images/gallery/chicken-burger/chicken-burger-1200w.jpeg 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px"
+              alt="Chicken burger stacked with slaw and house sauce"
+              loading="lazy">
+          </picture>
           <figcaption>
             <h5>Chicken Burger</h5>
             <p>Golden fillet, toasted bun, crunchy slaw and our tangy house sauce.</p>
           </figcaption>
         </figure>
         <figure class="gallery-card">
-          <img src="assets/images/Butter%20Chicken%20Salomie.jpeg" alt="Butter chicken salomie filled with creamy curry" loading="lazy">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-480w.webp 480w, assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-800w.webp 800w, assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-1200w.webp 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px">
+            <img
+              src="assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-800w.jpeg"
+              srcset="assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-480w.jpeg 480w, assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-800w.jpeg 800w, assets/images/gallery/butter-chicken-salomie/butter-chicken-salomie-1200w.jpeg 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px"
+              alt="Butter chicken salomie filled with creamy curry"
+              loading="lazy">
+          </picture>
           <figcaption>
             <h5>Butter Chicken Salomie</h5>
             <p>Soft paratha wrapped around buttery chicken masala and fresh greens.</p>
           </figcaption>
         </figure>
         <figure class="gallery-card">
-          <img src="assets/images/Mutton%20Curry%20Salomie.jpeg" alt="Mutton curry salomie with rich gravy" loading="lazy">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-480w.webp 480w, assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-800w.webp 800w, assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-1200w.webp 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px">
+            <img
+              src="assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-800w.jpeg"
+              srcset="assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-480w.jpeg 480w, assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-800w.jpeg 800w, assets/images/gallery/mutton-curry-salomie/mutton-curry-salomie-1200w.jpeg 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px"
+              alt="Mutton curry salomie with rich gravy"
+              loading="lazy">
+          </picture>
           <figcaption>
             <h5>Mutton Curry Salomie</h5>
             <p>Slow-cooked mutton curry tucked into flaky pastry with a mild kick.</p>
           </figcaption>
         </figure>
         <figure class="gallery-card">
-          <img src="assets/images/Boerewors%20Roll.jpeg" alt="Boerewors roll with relish and garnish" loading="lazy">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/gallery/boerewors-roll/boerewors-roll-480w.webp 480w, assets/images/gallery/boerewors-roll/boerewors-roll-800w.webp 800w, assets/images/gallery/boerewors-roll/boerewors-roll-1200w.webp 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px">
+            <img
+              src="assets/images/gallery/boerewors-roll/boerewors-roll-800w.jpeg"
+              srcset="assets/images/gallery/boerewors-roll/boerewors-roll-480w.jpeg 480w, assets/images/gallery/boerewors-roll/boerewors-roll-800w.jpeg 800w, assets/images/gallery/boerewors-roll/boerewors-roll-1200w.jpeg 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px"
+              alt="Boerewors roll with relish and garnish"
+              loading="lazy">
+          </picture>
           <figcaption>
             <h5>Boerewors Roll</h5>
             <p>Charred wors, relish and pickled garnish – the perfect grab-and-go bite.</p>
           </figcaption>
         </figure>
         <figure class="gallery-card">
-          <img src="assets/images/Samoosas.jpeg" alt="Tray of crispy samoosas" loading="lazy">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/gallery/samoosas/samoosas-480w.webp 480w, assets/images/gallery/samoosas/samoosas-800w.webp 800w, assets/images/gallery/samoosas/samoosas-1200w.webp 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px">
+            <img
+              src="assets/images/gallery/samoosas/samoosas-800w.jpeg"
+              srcset="assets/images/gallery/samoosas/samoosas-480w.jpeg 480w, assets/images/gallery/samoosas/samoosas-800w.jpeg 800w, assets/images/gallery/samoosas/samoosas-1200w.jpeg 1200w"
+              sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 360px"
+              alt="Tray of crispy samoosas"
+              loading="lazy">
+          </picture>
           <figcaption>
             <h5>Samoosas</h5>
             <p>Hand-folded triangles, deep fried to a crunch with a fragrant filling.</p>
@@ -907,18 +1040,18 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>
-        © 2025 Bored Room Café
-        <a href="https://www.facebook.com/people/Bored-Room-Cafe/61582472085204" class="social-footer ms-3" target="_blank" rel="noopener noreferrer" aria-label="Bored Room Café on Facebook">
-          <!-- Inline Facebook SVG icon -->
+    <div class="container footer-content">
+      <div class="footer-line">
+        <span>© 2025 Bored Room Café</span>
+        <a href="https://www.facebook.com/people/Bored-Room-Cafe/61582472085204" class="social-footer" target="_blank" rel="noopener noreferrer" aria-label="Bored Room Café on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21.13 10.44 21.93v-6.78H8.08v-2.98h2.36V9.41c0-2.33 1.4-3.61 3.53-3.61 1.02 0 2.09.18 2.09.18v2.3h-1.17c-1.15 0-1.51.72-1.51 1.46v1.75h2.57l-.41 2.98h-2.16v6.78C18.34 21.13 22 17.09 22 12.07z"/>
           </svg>
           <span class="visually-hidden">Facebook</span>
         </a>
-        | Crafted with ❤️ by <a href="https://nemesisnet.co.za">NemesisNet</a>
-      </p>
+        <span class="footer-divider" aria-hidden="true">•</span>
+        <span>Crafted with ❤️ by <a href="https://nemesisnet.co.za">NemesisNet</a></span>
+      </div>
     </div>
   </footer>
 

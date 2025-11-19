@@ -4,10 +4,8 @@ FROM nginx:alpine
 # Remove the default Nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy our landing page into Nginx's public folder
-COPY index.html /usr/share/nginx/html/
-
-COPY assets/ /usr/share/nginx/html/assets/
+# Copy our landing page bundle into Nginx's public folder
+COPY public/ /usr/share/nginx/html/
 
 # Expose port 80
 EXPOSE 80

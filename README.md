@@ -1,6 +1,6 @@
-# Bored Room Café Landing Page
+# Bored Room Cafe Landing Page
 
-A static, responsive marketing page for the Ferness Estate café, packaged for deployment on Nginx.
+A static, responsive marketing page for the Ferness Estate cafe, packaged for deployment on Nginx.
 
 ## Project Structure
 
